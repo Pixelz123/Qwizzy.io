@@ -131,6 +131,7 @@ function Quizcard() {
                                     question.Options.map((data, index) => (
                                         <button type="radio" className="btn btn-primary  h-[50px] w-[100%] my-[7px]"
                                             id={"choice" + index}
+                                            key={index}
                                             value="1"
                                             onClick={() => { choose(index, "choice" + index) }}
                                             style={{

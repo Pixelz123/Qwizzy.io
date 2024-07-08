@@ -4,7 +4,9 @@ import { socket } from '@/io_client'
 
 const Leaderboard = () => {
     const [leaderboard, setdata] = useState([])
+    const [quizid ,setid]=useState('')
     useEffect(() => {
+        setid(sessionStorage.getItem('quizid'))
         socket.on('getLeaderboard', (data) => {
             data[0].sort((a, b) => {
                 return a.Points < b.Points
@@ -17,7 +19,7 @@ const Leaderboard = () => {
     return (
         <div className="container">
             <center><h2>Leaderboard</h2></center>
-            <center><h3>Quiz code {sessionStorage.getItem('quizid')}</h3></center>
+            <center><h3>Quiz code {quizid}</h3></center>
             {
               leaderboard.length!=0 ?
                 <div className="row">
