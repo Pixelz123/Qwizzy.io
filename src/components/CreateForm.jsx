@@ -89,7 +89,7 @@ const QuestionForm = () => {
                 console.log(allQuestions)
             });
             const jsonData = allQuestions;
-            toast('Share quiz code '+{quizid})
+            toast('Share quiz code '+quizid)
             const quizData = { Quizid: quizid, Questions: jsonData, Users: [], State: 'Started', currentProblemNo: 0 }
             axios.post('api/db/', (quizData))
             setsave(ok)
