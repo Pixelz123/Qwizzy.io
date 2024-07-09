@@ -161,7 +161,7 @@ const QuestionForm = () => {
                     <button className="btn btn-primary mx-10" onClick={handleAddQuestion}>Add Questions</button>
                     {saved == false ?
                         <button className="btn btn-primary mx-10" onClick={handleGetQuestionData} >Save</button> :
-                        <button className="btn btn-success mx-10"  >Saved</button>
+                        <button className="btn btn-success mx-10"  >Saved Share quiz code :{quizid}</button>
                     }
                     {
                         saved ?
